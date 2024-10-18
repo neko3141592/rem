@@ -1,5 +1,0 @@
-./backend/ServiceAccount.json
-./backend/node_modules/
-./backend/.env
-
-./client/node_modules/

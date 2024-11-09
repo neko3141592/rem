@@ -20,7 +20,7 @@
             height: auto;
             margin: 0;
             padding: 8px 20px;
-            background-color: colors.dark;
+            background-color: map-get($map: color.$colors, $key: 'dark-gray');
             border-radius: 15px;
             color:white;
             font-size: 15px;

@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import MyPage from "./components/MyPage";
 import Add from "./components/Add";
 import { userData } from "./App";
+import NotFound from "./components/NotFound";
 
 const Router = () => {
     const data = useContext(userData);
@@ -28,8 +29,8 @@ const Router = () => {
                         <Route path="/mypage/add" element={<Add/>}/>
                     </>
                 )
-                
                 }
+                <Route path="/*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     );

@@ -51,4 +51,15 @@
         border-radius: 10px;
         width: 100%;
     }
+    p {
+        padding: 0;
+        margin: 0;
+        &.error {
+            color: red;
+        }
+    }
+    .required::after{
+        content: '*';
+        color: red;
+    }
 }

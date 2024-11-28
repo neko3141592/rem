@@ -1,0 +1,41 @@
+@use "./settings/var";
+@use "./settings/mixin";
+
+.login {
+    .content {
+        font-family: map-get(var.$fonts, 'sub') , sans-serif;
+        border: solid 1px #ccc;
+        padding: 20px;
+        border-radius: 20px;
+        @include mixin.rc-center;
+        h1 {
+            font-size: 25px;
+            text-align: center;
+        }
+        input{
+            font-size: 20px;
+            background-color: map-get(var.$colors, "light-gray");
+            border: none;
+            border-radius: 10px;
+            width: 400px;
+        }
+        button {
+            font-family: map-get(var.$fonts, 'sub') , sans-serif;
+            font-size: 20px;
+            background-color: black;
+            color:white;
+            border: none;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        .error {
+            text-align: center;
+            margin: 0;
+            font-size: 15px;
+            color: red;
+        }
+    }
+
+}

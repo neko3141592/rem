@@ -1,8 +1,9 @@
 import "./style/Home.scss";
 import Top from "./Top";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-    
+    const nav = useNavigate();
     return (
         <div className="home">
             <Top />

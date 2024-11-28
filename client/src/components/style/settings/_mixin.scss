@@ -1,0 +1,36 @@
+@use "./var";
+
+//display
+@mixin default {
+    margin: 40px;
+}
+@mixin rc-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin c-center {
+    margin: 0 auto;
+}
+
+
+//design
+@mixin title {
+    margin: 20px 0 30px 0;
+    h1 {
+        margin: 0;
+    }
+    width: 100%;
+    padding-left: 10px;
+    border-left:solid 3px map-get(var.$colors, "main-yellow");
+    border-radius: 1px;
+}
+
+//fonts
+@mixin font-main {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}

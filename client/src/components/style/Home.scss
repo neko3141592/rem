@@ -1,38 +1,58 @@
+@use "./settings/var";
+@use "./settings/mixin";
+
+.home {
 .content {
+    @include mixin.font-main;
+    @include mixin.rc-center;
     text-align: center;
-    font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 200;
     font-style: normal;
     margin: 0 auto;
+
     .title {
-        font-family: "Varela Round", sans-serif;
-        font-weight: 900;
+        font-weight: 200;
         font-style: normal;
         font-size: 5rem;
-        margin:0;
+        margin: 0;
     }
+
     .sub-title {
         font-size: 1.5rem;
         margin: 0;
     }
+
     .buttons {
         margin: 40px 0 0 0;
         button {
             margin: 10px;
             border-radius: 24px;
-            border: solid 2px;
             font-size: 20px;
-            padding: 5px 12px;
-            
-        }
-        .login {
-            background-color: white;
+            padding: 6px 20px;
             color: black;
+            transition: .1s;
         }
+
+        .login {
+            border: solid 2px black;
+            background-color: white;
+            &:hover{
+                color: white;
+                background-color: black;
+            }
+        }
+        
+
         .start {
-            background-color: black;
-            color:white;
+            border: solid 2px map-get(var.$colors, "main-yellow");
+            background-color: map-get(var.$colors, "main-yellow");
+            &:hover {
+                color: white;
+                background-color: map-get(var.$colors, "dark-blue");
+                border-color: map-get(var.$colors, "dark-blue");
+            }
         }
     }
+}
 }

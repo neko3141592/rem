@@ -1,0 +1,5 @@
+@use "./components/style/settings/var";
+body {
+    border-top: solid 5px map-get(var.$colors, "main-yellow");
+    height: 100%;
+}

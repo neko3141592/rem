@@ -6,6 +6,7 @@ const ServeceAccount = require('./ServiceAccount.json');
 const cors = require('cors');
 
 app.use(cors());
+app.use(express.json());
 
 admin.initializeApp({credential:admin.credential.cert(ServeceAccount)});
 

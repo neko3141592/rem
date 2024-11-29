@@ -39,6 +39,14 @@
             border-radius: 10px;
             border: solid 1px map-get(var.$colors, "main-yellow");
         }
+        .submit {
+            @include mixin.font-main;
+            font-size: 20px;
+            padding-left: 5px;
+            height: 40px;
+            border-radius: 10px;
+            border: solid 1px map-get(var.$colors, "main-yellow");
+        }
     }
     button {
         @include mixin.font-main;

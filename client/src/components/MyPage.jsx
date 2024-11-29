@@ -48,6 +48,46 @@ const MyPage = () => {
                 >
                     <span className="dli-plus"></span>
                 </button>
+                <div className="search">
+                <select 
+                    className="submit"
+                >
+                    <option>全て</option>
+                    <option>一般</option>
+                    <option>HR</option>
+                    <option>数学</option>
+                    <option>代数</option>
+                    <option>幾何</option>
+                    <option>数ⅠA</option>
+                    <option>数ⅡB</option>
+                    <option>数ⅢC</option>
+                    <option>英語</option>
+                    <option>英語Ⅰ</option>
+                    <option>英語Ⅱ</option>
+                    <option>英会話</option>
+                    <option>英文法</option>
+                    <option>国語</option>
+                    <option>現代文</option>
+                    <option>古文</option>
+                    <option>漢文</option>
+                    <option>理科</option>
+                    <option>理科Ⅰ</option>
+                    <option>理科Ⅱ</option>
+                    <option>社会</option>
+                    <option>公民</option>
+                    <option>地理</option>
+                    <option>歴史</option>
+                    <option>倫理</option>
+                    <option>政経</option>
+                    <option>情報</option>
+                    <option>音楽</option>
+                    <option>美術</option>
+                    <option>技術</option>
+                    <option>家庭科</option>
+                    <option>保健体育</option>
+                    <option>その他</option>
+                </select>
+                </div>
                 <div>
                     {printData?.data ? (
                             Array.isArray(printData.data) ? (

@@ -18,6 +18,7 @@ router.post('/create' , async (req, res) => {
         }
 
         const collectionName = 'users';
+
         const snapshot = await db.collection(collectionName).where('email', '==', user).get();
 
         if (snapshot.empty) {
@@ -40,7 +41,9 @@ router.get('/get/:userEmail', async (req, res) => {
         const userEmail = req.params.userEmail; 
         const collectionName = 'users';
 
-        const snapshot = await db.collection(collectionName).where('email', '==', userEmail).get();
+        const snapshot = await db.collection(collectionName)
+        .where('email', '==', userEmail)
+        .get();
 
         if (snapshot.empty) {
             return res.status(404).json({ message: 'User not found' });
@@ -61,6 +64,9 @@ router.get('/get/:userEmail', async (req, res) => {
                 });
             });
         }));
+        allPrintData.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date); // 降順で並び替え
+        });
         return res.status(200).json(allPrintData);
     } catch (error) {
         console.error('Error retrieving print data:', error);

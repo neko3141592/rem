@@ -4,5 +4,5 @@ const db = require('../index.js');
 const cron = require('node-cron');
 
 cron.schedule('', () => {
-
+    
 });

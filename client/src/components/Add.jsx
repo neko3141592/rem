@@ -84,7 +84,6 @@ const Add = () => {
                     className="submit"
                     {...register("tag")}
                 >
-                    <option>なし</option>
                     <option>一般</option>
                     <option>HR</option>
                     <option>数学</option>

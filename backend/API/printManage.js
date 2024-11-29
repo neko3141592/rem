@@ -73,7 +73,7 @@ router.get('/get/:userEmail', async (req, res) => {
         });    
         
         allPrintData.sort((a, b) => {
-            return new Date(b.date) - new Date(a.date); // 降順で並び替え
+            return new Date(a.date) - new Date(b.date); // 降順で並び替え
         });
 
         console.log(allPrintData.length);

@@ -1,70 +1,9 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## さるのなかだくん
+一度は誰しもが通る、色とりどりの思い出と冒険が詰まった場所、それが「スマイル幼稚園」だ。その幼稚園で、一人の男の子、なかだ君がいた。
+なかだ君は、明るく活発な5歳の男の子で、幼稚園の中で一番星に詳しい子としてみんなから知られていた。彼にはある夢があり、それは大きな望遠鏡で夜空の星を見ることだった。しかし、なかだ君の家には望遠鏡がなかったので、彼の夢は叶えられていなかった。
+ある日、なかだくんは星についての話を友達にしているときに、教師のかたむら先生が近づいてきました。「なかだくん、星が好きなんだね」とかたむら先生。「うん、星はすごくきれいだし、宇宙はとても大きいから、星について考えるとわくわくするよ！」なかだくんは胸を張りました。
+そこでかたむら先生は、「じゃあ、明日お昼寝の時間に少し教室でお話しようか？」と言いました。なかだくんはなんのことだかわからなかったけれど、興奮してうなずきました。
+次の日、お昼寝の時間。友達が皆寝静まる中、なかだくんだけは時計を見て待っていました。そして、先生も忘れないでいました。彼女は教室の片隅に大きな黒いケースを持ってきました。それを開くと、そこにはなかだくんの夢だった大きな望遠鏡が入っていたのです。
+なかだくんは驚きと喜びであふれて、むっつりと先生を睨みつけました。「これは一体…？」となかだくんが言うと先生は優しく微笑み、「なかだくんの夢を見つけたから、一緒に見てみようと思ったんだ」と言いました。
+なかだくんとかたむら先生は夕方まで一緒に望遠鏡を使って星を観察しました。なかだくんの夢が叶い、その日からなかだくんはもっともっと星や宇宙について知るために勉強しました。そして、なかだくんは友達にも星についての新しい知識を分け与え、一緒に星を観察する時間を持つようになりました。
+この物語から、夢を持つことの大切さや、夢を応援する人の存在の大切さを学びます。そして、夢は報われる時期がくれば必ず叶うということを示しています。そのためにも、我々は一生懸命働き、夢に向かって努力するべきです。

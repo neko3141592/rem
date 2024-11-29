@@ -4,26 +4,35 @@ import './style/Add.scss';
 import { useForm } from 'react-hook-form';
 import { userData } from "../App";
 import Axios from 'axios';
+import { base } from "../BaseUrl";
+import { useNavigate } from "react-router-dom";
 
 const Add = () => {
     const userdata = useContext(userData);
+    const navigate = useNavigate();
     const {register , handleSubmit , formState:{errors} } = useForm({mode:"onBlur"});
+    const [serverError , setServerError] = useState(false);
     const onSubmit = (data) => {
-        console.log(data);
         const sendData = {
             user:userdata.email,
             title:data.title,
             date:data.date,
-            submit1: (data.submit1 === "あり"? true : false),
-            submit2: (data.submit2 === "あり"? true : false),
+            exp: (!data.exp ? "" : data.exp),
+            submit1: (data.submit1 === "あり" ? true : false),
+            submit2: (data.submit2 === "あり" ? true : false),
             tag: data.tag,
         }
-        const url = "";
-        Axios.post(url , sendData , {
+        Axios.post(`${base}/api/print/create` , sendData , {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer `,
             }
+        })
+        .then(() => {
+            
+        })
+        .catch((error) => {
+            serverError(true);
         })
     }
     return (
@@ -76,9 +85,11 @@ const Add = () => {
                     {...register("tag")}
                 >
                     <option>なし</option>
+                    <option>一般</option>
+                    <option>HR</option>
                     <option>数学</option>
-                    <option>数学A</option>
-                    <option>数学B</option>
+                    <option>数学-代数</option>
+                    <option>数学-幾何</option>
                     <option>数学ⅠA</option>
                     <option>数学ⅡB</option>
                     <option>数学ⅢC</option>
@@ -88,11 +99,25 @@ const Add = () => {
                     <option>英会話</option>
                     <option>英文法</option>
                     <option>国語</option>
-                    <option>国語A</option>
-                    <option>国語B</option>
+                    <option>国語-現代文</option>
+                    <option>国語-古文</option>
+                    <option>国語-漢文</option>
                     <option>理科</option>
                     <option>理科Ⅰ</option>
                     <option>理科Ⅱ</option>
+                    <option>社会</option>
+                    <option>公民</option>
+                    <option>地理</option>
+                    <option>歴史</option>
+                    <option>倫理</option>
+                    <option>政経</option>
+                    <option>情報</option>
+                    <option>音楽</option>
+                    <option>美術</option>
+                    <option>技術</option>
+                    <option>家庭科</option>
+                    <option>保健体育</option>
+                    <option>その他</option>
                 </select>
                 <button onClick={handleSubmit(onSubmit)}>完了</button>
             </div>

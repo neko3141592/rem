@@ -27,10 +27,10 @@ const Router = () => {
                     <>
                         <Route path="/mypage" element={<MyPage/>}/>
                         <Route path="/mypage/add" element={<Add/>}/>
+                        <Route path="/*" element={<NotFound/>}/>
                     </>
                 )
                 }
-                <Route path="/*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     );

@@ -29,7 +29,7 @@ const Add = () => {
             }
         })
         .then(() => {
-            
+            navigate('/mypage')
         })
         .catch((error) => {
             setServerError(true);

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { userData } from "../App";
 import  Axios  from "axios";
 import { base } from "../BaseUrl";
+import Footer from "./Footer";
 
 const MyPage = () => {
     const navigate = useNavigate();

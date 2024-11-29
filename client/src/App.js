@@ -6,6 +6,7 @@ import { createContext, useEffect, useState } from 'react';
 import Axios from 'axios';
 import { base } from './BaseUrl';
 import { useNavigate } from 'react-router-dom';
+import Footer from './components/Footer';
 
 export const userData = createContext(null);
 
@@ -40,6 +41,7 @@ function App() {
         <Router/>
       </div>
     </userData.Provider>
+    
   );
 }
 

@@ -29,7 +29,7 @@ const Top = () => {
                                 to={'/home'} 
                                 onClick={()=>{
                                     Logout();  
-                                    navigate('/home');
+                                    navigate('/');
                                     window.location.reload();
                                 }}
                             >

@@ -32,7 +32,7 @@ const Add = () => {
             
         })
         .catch((error) => {
-            serverError(true);
+            setServerError(true);
         })
     }
     return (
@@ -52,7 +52,7 @@ const Add = () => {
                 <p className="error">{errors.title?.message}</p>
                 <h2 className="required">期限</h2>
                 <input 
-                    type="date" 
+                    type="datetime-local" 
                     className="input-date"
                     {...register("date", {required:"期限は必須です", valueAsDate:true, min: new Date()})}
                 />
@@ -88,20 +88,20 @@ const Add = () => {
                     <option>一般</option>
                     <option>HR</option>
                     <option>数学</option>
-                    <option>数学-代数</option>
-                    <option>数学-幾何</option>
-                    <option>数学ⅠA</option>
-                    <option>数学ⅡB</option>
-                    <option>数学ⅢC</option>
+                    <option>代数</option>
+                    <option>幾何</option>
+                    <option>数ⅠA</option>
+                    <option>数ⅡB</option>
+                    <option>数ⅢC</option>
                     <option>英語</option>
                     <option>英語Ⅰ</option>
                     <option>英語Ⅱ</option>
                     <option>英会話</option>
                     <option>英文法</option>
                     <option>国語</option>
-                    <option>国語-現代文</option>
-                    <option>国語-古文</option>
-                    <option>国語-漢文</option>
+                    <option>現代文</option>
+                    <option>古文</option>
+                    <option>漢文</option>
                     <option>理科</option>
                     <option>理科Ⅰ</option>
                     <option>理科Ⅱ</option>
@@ -120,6 +120,11 @@ const Add = () => {
                     <option>その他</option>
                 </select>
                 <button onClick={handleSubmit(onSubmit)}>完了</button>
+                <p className="error">
+                {
+                    (serverError)?("問題が発生しました"):("")
+                }
+                </p>
             </div>
         </div>
     );

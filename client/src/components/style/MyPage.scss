@@ -21,6 +21,42 @@
     .title {
         @include mixin.title;
     }
+    .item {
+        border: solid 1.5px map-get(var.$colors, "main-yellow");
+        padding: 0 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+        transition: .2s;
+        h2 {
+            @include mixin.title;
+        }
+        p {
+            font-size: 20px;
+        }
+        &:hover{
+            background-color: #FAFAFA;
+        }
+    }
+    .head-items {
+        background-color: map-get(var.$colors, "main-yellow");
+        padding: 0 2.5px;
+        width: fit-content;
+        margin: 0;
+        border-radius: 0 0 5px 5px;
+        height: 30px;
+        margin-right: 2.5px;
+        width: 80px;
+        text-align: center;
+    }
+    .item-heads {
+        display: flex;
+    }
+    .submit1,.submit2 {
+        background-color: #ff758f;
+    }
+    .date span{
+        font-size: 22.5px;
+    }
 }
 
 .dli-plus {

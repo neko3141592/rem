@@ -8,7 +8,7 @@
         .title {
             @include mixin.title;
         }
-        input,textarea {
+        input,textarea,select{
             outline:none;
             margin-bottom: 20px;
         }

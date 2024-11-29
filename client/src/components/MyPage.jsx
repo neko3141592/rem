@@ -11,6 +11,9 @@ const MyPage = () => {
     const navigate = useNavigate();
     const [printData , setPrintData] = useState(null);
     const userdata = useContext(userData);
+    const [searchData , setSearchData] = useState({
+        tag:"all",
+    });
     const formatDateWithTime = (dateString) => {
         const date = new Date(dateString);
         return date.toLocaleString('ja-JP', {
@@ -23,10 +26,15 @@ const MyPage = () => {
         });
     };
     useEffect(() => {
+        console.log(searchData);
         if (!userData) {
             return;
         }
-        Axios.get(`${base}/api/print/get/${userdata.email}`)
+        Axios.get(`${base}/api/print/get/${userdata.email}`, {
+            params: {
+                tag: (searchData.tag === '全て' ? "all" : searchData.tag),
+            },
+        })
         .then((res) => {
             setPrintData(res);
         })
@@ -34,7 +42,7 @@ const MyPage = () => {
 
         });
         
-    } , [userData]);
+    } , [userData, searchData]);
     return (
         <>
             <Top/>
@@ -51,6 +59,12 @@ const MyPage = () => {
                 <div className="search">
                 <select 
                     className="submit"
+                    onChange={(e) => {
+                        setSearchData((prevState) => ({
+                            ...prevState,
+                            tag: e.target.value,
+                        }));
+                    }}
                 >
                     <option>全て</option>
                     <option>一般</option>

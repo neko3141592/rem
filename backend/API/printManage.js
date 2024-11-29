@@ -37,8 +37,10 @@ router.post('/create' , async (req, res) => {
 });
 
 router.get('/get/:userEmail', async (req, res) => {
+    const query = req.query;
     try {
         const userEmail = req.params.userEmail; 
+        const query = req.query;
         const collectionName = 'users';
 
         const snapshot = await db.collection(collectionName)
@@ -64,9 +66,19 @@ router.get('/get/:userEmail', async (req, res) => {
                 });
             });
         }));
+
         allPrintData.sort((a, b) => {
             return new Date(b.date) - new Date(a.date); // 降順で並び替え
         });
+        console.log(allPrintData.length);
+        console.log(query.tag);
+
+        allPrintData = allPrintData.filter((a) => {
+            if (query.tag === "all") return true; // 全データを返す
+            return a.tag.trim().toLowerCase() === query.tag.trim().toLowerCase();
+        });             
+
+        console.log(allPrintData.length);
         return res.status(200).json(allPrintData);
     } catch (error) {
         console.error('Error retrieving print data:', error);

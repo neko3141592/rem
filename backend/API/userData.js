@@ -23,7 +23,6 @@ const searchUser = async (query) => {
     const searchData = {
         email: query.email
     };
-    
     try {
         const snapshot = await db.collection('users')
             .where('email', '==', searchData.email)

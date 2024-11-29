@@ -18,7 +18,7 @@ const MyPage = () => {
             day: 'numeric',
             hour: '2-digit',
             minute: '2-digit',
-            hour12: false, // 24時間形式
+            hour12: false, 
         });
     };
     useEffect(() => {
@@ -57,7 +57,6 @@ const MyPage = () => {
                                             {(item.submit1)?(<p className="submit2 head-items">保護者</p>):("")}
                                             {(item.submit2)?(<p className="submit2 head-items">先生</p>):("")}
                                         </div>
-                                        
                                         <h2>{item.title}</h2>
                                         <p className="date">期限: <span>{formatDateWithTime(item.date)}</span></p>
                                         <p>{item.exp}</p>

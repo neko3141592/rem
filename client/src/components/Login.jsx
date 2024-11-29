@@ -17,7 +17,6 @@ const Login = () => {
         })
         .catch((error) => {
             setErrState(true);
-            console.log(error);
         })
     }
     return (

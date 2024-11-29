@@ -9,6 +9,7 @@ import MyPage from "./components/MyPage";
 import Add from "./components/Add";
 import { userData } from "./App";
 import NotFound from "./components/NotFound";
+import Documents from "./components/Documents";
 
 const Router = () => {
     const data = useContext(userData);
@@ -27,6 +28,7 @@ const Router = () => {
                     <>
                         <Route path="/mypage" element={<MyPage/>}/>
                         <Route path="/mypage/add" element={<Add/>}/>
+                        <Route path="/documents/:id" element={<Documents/>}/>
                         <Route path="/*" element={<NotFound/>}/>
                     </>
                 )

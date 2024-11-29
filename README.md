@@ -1,9 +1,9 @@
  
-# REM-DOCS
+# Rem-docs
 ## Created by Custom-Our
 
 ### 利用方法
-1. **REM-DOCS**に**Google**アカウントでログイン
+1. **Rem-Docs**に**Google**アカウントでログイン
 2. **＋**ボタンを押して追加ページに遷移
 3. 以下の項目を入力
 

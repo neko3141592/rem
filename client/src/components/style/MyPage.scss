@@ -4,6 +4,10 @@
 .mypage {
     @include mixin.default;
     @include mixin.font-main;
+    a {
+        text-decoration: none;
+        color: black;
+    }
     .plus-button {
         display: block;
         width: 60px;

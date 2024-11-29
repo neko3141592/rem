@@ -1,0 +1,46 @@
+@use "./settings/var";
+@use "./settings/mixin";
+
+.documents {
+    @include mixin.default;
+    @include mixin.font-main;
+    .title {
+        @include mixin.title;
+    }
+    .head-items {
+        background-color: map-get(var.$colors, "main-yellow");
+        padding: 0 2.5px;
+        width: fit-content;
+        margin: 0;
+        border-radius: 5px;
+        height: 30px;
+        margin-right: 2.5px;
+        width: 80px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .item-heads {
+        display: flex;
+    }
+    .submit1,.submit2 {
+        background-color: #ff758f;
+    }
+    .exp {
+        font-size: 20px;
+        height: 100%;
+    }
+    button {
+        @include mixin.font-main;
+        font-size: 20px;
+        background-color: #ff758f;
+        color:white;
+        border: none;
+        padding: 10px;
+        margin-top: 50px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    h2 {
+        margin-bottom: 50px;
+    }
+}

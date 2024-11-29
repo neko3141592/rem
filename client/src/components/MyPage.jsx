@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import Top from "./Top";
 import './style/MyPage.scss';
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { userData } from "../App";
 import  Axios  from "axios";
 import { base } from "../BaseUrl";
@@ -106,16 +106,18 @@ const MyPage = () => {
                     {printData?.data ? (
                             Array.isArray(printData.data) ? (
                                 printData.data.map((item) => (
+                                    <NavLink to={`/documents/${item.id}`}>
                                     <div key={item.id} className="item">
                                         <div className="item-heads">
                                             <p className="tag head-items">{item.tag}</p>
-                                            {(item.submit1)?(<p className="submit2 head-items">保護者</p>):("")}
-                                            {(item.submit2)?(<p className="submit2 head-items">先生</p>):("")}
+                                            {(item?.submit1)?(<p className="submit1 head-items">保護者</p>):("")}
+                                            {(item?.submit2)?(<p className="submit2 head-items">先生</p>):("")}
                                         </div>
-                                        <h2>{item.title}</h2>
+                                        <h2>{item?.title}</h2>
                                         <p className="date">期限: <span>{formatDateWithTime(item.date)}</span></p>
-                                        <p>{item.exp}</p>
+                                        <p>{item?.exp}</p>
                                     </div>
+                                    </NavLink>
                                 ))
                             ) : (
                                 <div>

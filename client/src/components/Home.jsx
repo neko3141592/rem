@@ -11,8 +11,8 @@ const Home = () => {
                 <h1 className="title">Rem-docs</h1>
                 <h2 className="sub-title">究極のプリント管理システム</h2>
                 <div className="buttons" >
-                    <button onClick={()=>{}} className="login">Login</button>
-                    <button onClick={()=>{}} className="start">Registar</button>
+                    {/* <button onClick={()=>{}} className="login">Login</button>
+                    <button onClick={()=>{}} className="start">Registar</button> */}
                 </div>
             </div>
         </div>

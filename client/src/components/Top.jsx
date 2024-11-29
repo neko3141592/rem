@@ -11,7 +11,7 @@ const Top = () => {
         <div className="top">
             <div className="list">
                 <div className="left">
-                    <img src={icon} width={"50px"} className="icon"/>
+                    <NavLink to='/'><img src={icon} width={"50px"} className="icon"/></NavLink>
                 </div>
                 <div className="right">
                 {

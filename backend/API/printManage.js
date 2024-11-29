@@ -67,16 +67,14 @@ router.get('/get/:userEmail', async (req, res) => {
             });
         }));
 
-        allPrintData.sort((a, b) => {
-            return new Date(b.date) - new Date(a.date); // 降順で並び替え
-        });
-        console.log(allPrintData.length);
-        console.log(query.tag);
-
         allPrintData = allPrintData.filter((a) => {
             if (query.tag === "all") return true; // 全データを返す
             return a.tag.trim().toLowerCase() === query.tag.trim().toLowerCase();
-        });             
+        });    
+        
+        allPrintData.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date); // 降順で並び替え
+        });
 
         console.log(allPrintData.length);
         return res.status(200).json(allPrintData);

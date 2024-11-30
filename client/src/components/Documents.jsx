@@ -29,7 +29,6 @@ const Documents = () =>{
             }
         })
         .then((res) => {
-            
             navigate('/mypage');
         })
         .catch((error) => {

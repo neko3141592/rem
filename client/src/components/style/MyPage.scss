@@ -33,9 +33,12 @@
         transition: .2s;
         h2 {
             @include mixin.title;
+            width:90%;
         }
         p {
             font-size: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         &:hover{
             background-color: #FAFAFA;
